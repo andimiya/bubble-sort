@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/andimiya/bubble-sort#readme",
   "dependencies": {
+    "body-parser": "^1.16.0",
     "chai": "^3.5.0",
     "express": "^4.14.1",
+    "express-method-override": "0.0.3",
+    "method-override": "^2.3.7",
     "mocha": "^3.2.0"
   }
 }
