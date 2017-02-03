@@ -1,18 +1,18 @@
 
-var array = [5, 8, 1, 4, 2, 9, 7, 6, 3];
+var sortThis = [5, 8, 1, 4, 2, 9, 7, 6, 3];
 
 sort();
 
 function sort() {
-  for (var i = 0; i <= array.length; i++) {
-    var first = array[i];
-    var second = array[i + 1];
-    if (array[i] > array[i + 1]) {
-      first = array[i];
-      second = array [i + 1];
-      array.splice(i, 2, second, first)
+  for (var i = 0; i <= sortThis.length; i++) {
+    var first = sortThis[i];
+    var second = sortThis[i + 1];
+    if (sortThis[i] > sortThis[i + 1]) {
+      first = sortThis[i];
+      second = sortThis [i + 1];
+      sortThis.splice(i, 2, second, first)
       sort();
     }
   }
 }
-console.log(array, 'array in loop');
+console.log(sortThis, 'array in loop');
