@@ -1,24 +1,30 @@
 const express = require('express');
 const router = express.Router();
 
+router.get('/', (req, res) => {
+  res.render('index');
+});
+
 router.post('/bubble', (req, res) => {
+
+// var sortThis = [5, 8, 1, 2, 4, 2, 9, 7, 6, 3];
   var sortThis = req.body.array.split("").map(Number);
 
-  var swap = null;
   var n = 0;
+  var x = 0;
+  var y = 0;
 
-  while (n < sortThis.length) {
+  while (n < sortThis.length-1) {
     for (var i = 0; i <= sortThis.length; i++) {
       var first = sortThis[i];
       var second = sortThis[i + 1];
       if (sortThis[i] > sortThis[i + 1]) {
-        swap = true;
-        n++;
         first = sortThis[i];
         second = sortThis [i + 1];
         sortThis.splice(i, 2, second, first);
       }
     }
+    n++;
   }
   res.send(sortThis);
 });
