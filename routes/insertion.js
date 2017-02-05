@@ -1,18 +1,39 @@
-let array = [3, 2, 4, 5, 1, 6];
+let array = [3, 6, 4, 2, 5, 1, 6];
+let numberToSort = 0;
 
-for (var i = 0; i < array.length; i++){
-  var first = array[i];
-  var second = array[i + 1];
+numberToSort = array[1];
 
-  if(array[i] > array[i + 1]){
-    first = array[i];
-    second = array[i + 1];
-    array.splice(i, 2, second, first);
-      console.log(array)
-
-  }
-
+if(numberToSort > array[0]){
+  first = array[0];
+  second = array[1];
+  array.splice(0, 2, second, first);
+    console.log(array);
 }
+
+if(numberToSort > array[0]){
+  first = array[0];
+  second = array[1];
+  array.splice(0, 2, second, first);
+    console.log(array);
+}
+
+
+
+// for (var i = 0; i <= array.length; i++){
+
+
+//   var first = array[i];
+//   var second = array[i + 1];
+
+//   if(array[i] > array[i + 1]){
+//     first = array[i];
+//     second = array[i + 1];
+//     array.splice(i, 2, second, first);
+//       console.log(array);
+
+//   }
+
+// }
 
 
 // while (n < sortThis.length-1) {
