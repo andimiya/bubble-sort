@@ -1,22 +1,31 @@
-var sortThis = [4, 2, 3, 1, 6, 5];
+var array = [4, 2, 3, 1, 6, 5, 9];
 
-var pivot = sortThis[0];
 
-var leftArray = [];
-var rightArray = [];
+function quickSort(array) {
 
-//First split
-for (var i = 0; i < sortThis.length; i++){
-  if (sortThis[i] < pivot) {
-    leftArray.push(sortThis[i]);
+  var pivot = array[0];
+  var left = [];
+  var right = [];
+
+  if (array.length <= 1) {
+    console.log('if');
+    return array;
   }
-  else if (sortThis[i] > pivot) {
-    rightArray.push(sortThis[i]);
+
+  //split
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] < pivot) {
+      left.push(array[i]);
+      console.log(left);
+    }
+    else if (array[i] > pivot) {
+      right.push(array[i]);
+      console.log(right, 'left array');
+    }
   }
+  console.log('test');
+  console.log(left, 'left array');
+  return quickSort(left.concat(pivot, right)), quickSort(right);
+  quickSort();
 }
 
-//After this loop, leftArray = [2, 3, 1]
-//rightArray = [6, 5]
-
-console.log(leftArray);
-console.log(rightArray);

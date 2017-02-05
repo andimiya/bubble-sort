@@ -1,7 +1,7 @@
 let array = [3, 6, 4, 2, 5, 1, 6];
 let numberToSort = 0;
 
-numberToSort = array[1];
+numberToSort = array[3];
 
 if(numberToSort > array[0]){
   first = array[0];
@@ -10,12 +10,12 @@ if(numberToSort > array[0]){
     console.log(array);
 }
 
-if(numberToSort > array[0]){
-  first = array[0];
-  second = array[1];
-  array.splice(0, 2, second, first);
-    console.log(array);
-}
+// if(numberToSort > array[0]){
+//   first = array[0];
+//   second = array[1];
+//   array.splice(0, 2, second, first);
+//     console.log(array);
+// }
 
 
 
