@@ -28,4 +28,6 @@ function quickSort(array) {
   return quickSort(left).concat(pivot, quickSort(right));
 }
 
-console.log(quickSort(array));
+// console.log(quickSort(array));
+
+quickSort(array);
