@@ -1,31 +1,30 @@
-let array = [14, 7, 3, 12, 9, 11, 6, 2];
 
-console.log(array.length/2);
 
-var firstHalf = array.slice(0, array.length/2);
-var secondHalf = array.slice(array.length/2, array.length);
 
-console.log(firstHalf, 'firstHalf');
-console.log(secondHalf, 'secondHalf');
 
-var one = firstHalf.slice(0, firstHalf.length/2);
-console.log(one, 'one');
+function mergeSort(array)
+    // Base case. A list of zero or one elements is sorted, by definition.
 
-var two = firstHalf.slice(firstHalf.length/2, firstHalf.length);
-console.log(two, 'two');
+    if (array.length <= 1) {
+      return array;
+    }
 
-var three = secondHalf.slice(0, secondHalf.length/2);
-console.log(three, 'three');
+    // Recursive case. First, divide the list into equal-sized sublists
+    // consisting of the first half and second half of the list.
+    var left := empty list
+    var right := empty list
+    for each x with index i in m do
+        if i ≤ (length of m)/2 then
+            add x to left
+        else
+            add x to right
 
-var four = secondHalf.slice(secondHalf.length/2, secondHalf.length);
-console.log(four, 'four');
+    // Recursively sort both sublists.
+    left := merge_sort(left)
+    right := merge_sort(right)
 
-function swap(pair){
-
+    // Then merge the now-sorted sublists.
+    return merge(left, right)
 }
 
-swap(one);
-swap(two);
-
-console.log(one);
-console.log(two);
+mergeSort([6, 3, 4, 8, 7, 6, 2, 5, 1]);
