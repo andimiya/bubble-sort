@@ -9,43 +9,35 @@ function mergeSort(array) {
     var mid = Math.floor(array.length / 2);
     var left = array.slice(0, mid);
     var right = array.slice(mid, array.length);
-    console.log(left);
-    console.log(right);
+    console.log(left, 'left');
+    console.log(right, 'right');
 
-    //recursion - call the mergeSort function again, and return both the left and right array each time it runs
-    mergeSort(left, right);
-    return sortCombine(left, right);
+    //bring the left and array's from each callstack into the sortCombine function.
+    //sortCombine function's job will be to order and concat all of the pieces
+    return sortCombine(mergeSort(left), mergeSort(right));
 }
 
 //Sort each array, then combine them
 function sortCombine (left, right) {
   var result = [];
+
   //sort and merge each element, if the length of both the left and right arrays are greater than 0
   //push the sorted results into the result array
 
-  console.log(left[0], 'left');
-  console.log(right[0], 'right');
-
   //loop through until the array halves have 1 item left in it
   while (left.length > 0 && right.length > 0) {
-    if (left[0] > right[0]) {
-      result.push(left[0]);
+    if (left[0] < right[0]) {
+      //push the first element in each array to the combined array
+      result.push(left.shift());
+     console.log(result, 'result');
     }
     else {
-      result.push(right[0]);
+      result.push(right.shift());
     }
-
-    // console.log(result, 'result');
-    // else {
-
-    // }
-
-    // else if (left[0] > right[0]) {
-    //   result.push(right[0], left[0]);
-    // }
-
   }
-
+  return result.concat(left.slice(0).concat(right.slice(0)));
 }
+
+
 
 mergeSort([6, 3, 4, 8, 7, 2, 5, 1]);
