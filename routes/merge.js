@@ -1,7 +1,3 @@
-
-
-
-
 function mergeSort(array) {
 
     //Base case - if array.length <= 1, then array is already sorted and array should be returned
@@ -17,26 +13,39 @@ function mergeSort(array) {
     console.log(right);
 
     //recursion - call the mergeSort function again, and return both the left and right array each time it runs
-    return mergeSort(left, right);
-
-    // Recursive case. First, divide the list into equal-sized sublists
-    // consisting of the first half and second half of the list.
-
+    mergeSort(left, right);
+    return sortCombine(left, right);
 }
 
+//Sort each array, then combine them
+function sortCombine (left, right) {
+  var result = [];
+  //sort and merge each element, if the length of both the left and right arrays are greater than 0
+  //push the sorted results into the result array
 
-    // for each x with index i in m do
-    //     if i ≤ (length of m)/2 then
-    //         add x to left
-    //     else
-    //         add x to right
+  console.log(left[0], 'left');
+  console.log(right[0], 'right');
 
-    // Recursively sort both sublists.
-//     left := merge_sort(left)
-//     right := merge_sort(right)
+  //loop through until the array halves have 1 item left in it
+  while (left.length > 0 && right.length > 0) {
+    if (left[0] > right[0]) {
+      result.push(left[0]);
+    }
+    else {
+      result.push(right[0]);
+    }
 
-//     // Then merge the now-sorted sublists.
-//     return merge(left, right)
-// }
+    // console.log(result, 'result');
+    // else {
+
+    // }
+
+    // else if (left[0] > right[0]) {
+    //   result.push(right[0], left[0]);
+    // }
+
+  }
+
+}
 
 mergeSort([6, 3, 4, 8, 7, 2, 5, 1]);
