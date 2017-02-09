@@ -1,3 +1,5 @@
+
+
 function mergeSort(array) {
 
     //Base case - if array.length <= 1, then array is already sorted and array should be returned

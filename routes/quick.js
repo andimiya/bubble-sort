@@ -1,6 +1,10 @@
-var array = [4, 2, 3, 1, 6, 5, 9];
+const express = require('express');
+const router = express.Router();
 
+router.post('/quick', (req, res) => {
 
+let array = req.body.array.split("").map(Number);
+// var array = [4, 2, 3, 1, 6, 5, 9];
 
 function quickSort(array) {
 
@@ -29,5 +33,7 @@ function quickSort(array) {
 }
 
 // console.log(quickSort(array));
+});
 
-quickSort(array);
+module.exports = router;
+// quickSort(array);
