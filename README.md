@@ -61,29 +61,68 @@ Selection sort sorts an array of numbers by searching through the entire array a
 ### Pseudocode
 ```
 min = 0
-*look through the array from start to finish - use a loop*
+/* look through the array from start to finish - use a loop */
 for j <- 0 to length(A)
-  *finds the smallest number in the array, stores it to 'min'*
+  /* finds the smallest number in the array, stores it to 'min' /*
   min = Math.min A[j]
-  *store the array position of the min number to 'min'*
+  /* store the array position of the min number to 'min' */
   min = j
-  *test against elements after j to find the smallest number*
+  /* test against elements after j to find the smallest number */
   for i = j + 1 to length(A)
-    *if the element is less, then it is the new minimum*
+    /* if the element is less, then it is the new minimum */
     if (A[i] < A[min])
       min = 1
     end if
   end for
-  *if min is not equal to j, then swap the position of the new lowest number found with the lowest number's position*
+  /* if min is not equal to j, then swap the position of the new lowest number found with the lowest number's position */
   if (min!== j)
     swap A[j] and A[min]
 ```
 
 ### Performance
 **Best Case Scenario:**
--
+- Most performant scenario would be if the array is sorted, except that the smallest number in the array is not in the first position.
 
 **Worst Case Scenario:**
+- Least performant scenario would be if the array was sorted in reverse order, because each number in the array would have to be picked up and sorted.
 
 
 ## Merge Sort
+
+Merge sort divides an array of numbers down into pieces, compares each pair of numbers, then compares each set of numbers, then strings all of the numbers together.
+
+### Pseudocode
+```
+functionA (array)
+    /*Base case - if array.length <= 1, then array is already sorted and array should be returned*/
+  if (length(A))
+    return A
+  end if
+
+  mid = Math.floor(length(A)/2)
+  left = slice(0, mid)
+  right = slice(mid, length(A))
+
+  /*Bring the left and array's from each callstack into the sortCombine function*/
+  /*SortCombine function's job will be to order and concat all of the pieces*/
+
+  return functionB (a, b)
+end functionA
+
+/*Sort each array, then combine them*/
+functionB (a, b)
+  result = []
+  /*sort and merge each element, if the length of both the left and right arrays are greater than 0*/
+  while (length(a) > 0 && length(b) > 0)
+    if (a[0] < b[0])
+      /*push the first element in each array to the combined array*/
+      result.push(a.shift)
+    end if
+    else
+      result.push(b.shift)
+    end else
+  end while
+  return result.concat (a, b)
+end FunctionB
+```
+
