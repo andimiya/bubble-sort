@@ -61,22 +61,27 @@ Selection sort sorts an array of numbers by searching through the entire array a
 ### Pseudocode
 ```
 min = 0
-/* look through the array from start to finish - use a loop */
+*look through the array from start to finish - use a loop*
 for j <- 0 to length(A)
-  /* finds the smallest number in the array, stores it to 'min'*/
+  *finds the smallest number in the array, stores it to 'min'*
   min = Math.min A[j]
+  *store the array position of the min number to 'min'*
   min = j
+  *test against elements after j to find the smallest number*
   for i = j + 1 to length(A)
+    *if the element is less, then it is the new minimum*
     if (A[i] < A[min])
       min = 1
     end if
   end for
+  *if min is not equal to j, then swap the position of the new lowest number found with the lowest number's position*
   if (min!== j)
     swap A[j] and A[min]
 ```
 
 ### Performance
 **Best Case Scenario:**
+-
 
 **Worst Case Scenario:**
 
