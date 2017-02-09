@@ -16,20 +16,33 @@ Bubble sort sorts numbers by pairing up numbers starting from the beginning of t
 ### Pseudocode
 > Create a loop that runs from 0 until the length of the array.
 
-> Compare a number in the array to the number next to it in the array
+> Compare a number in the array to the number next to it in the array.
 
-> If the first number is larger, then swap the position of the 2 numbers
+> If the first number is larger, then swap the position of the 2 numbers.
 
-> Continue to run this loop until the entire array is sorted
+> Continue to run this loop until the entire array is sorted.
 
 ### Performance
-**Best Case Scenario**
-Performance will be best if the array is already sorted, or if only the first two numbers in the list were out of order.
+**Best Case Scenario:**
 
-**Worst Case Scenario**
-Performance will be the least ideal if the numbers are in reverse order.
+Performance will be best if the array is already sorted, or if only the first two numbers in the list were out of order.
+Because the array is sorted by first comparing the first two numbers and ordering them, it would only need to go through one pass through the array until it was done sorting.
+
+**Worst Case Scenario:**
+
+Performance will be the least ideal if the numbers are in reverse order, because it would take as many passes as the length of the array to complete the sort.
 
 ## Insertion Sort
+
+### What is it?
+
+### Pseudocode
+
+### Performace
+**Best Case Scenario:**
+
+**Worst Case Scenario:**
+
 
 ## Selection Sort
 
