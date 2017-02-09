@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
+router.get('/', (req, res) => {
+  res.render('index');
+});
+
 router.post('/bubble', (req, res) => {
 
 // var sortThis = [5, 8, 1, 2, 4, 2, 9, 7, 6, 3];

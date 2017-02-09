@@ -33,6 +33,7 @@ let min = 0;
       array[min] = temp;
     }
   }
+  res.send(array);
 });
 
 module.exports = router;
