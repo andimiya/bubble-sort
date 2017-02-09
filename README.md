@@ -4,6 +4,6 @@
 
 ## Insertion Sort
 
-##
+## Selection Sort
 
 ## Merge Sort
