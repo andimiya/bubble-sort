@@ -14,9 +14,12 @@
 Bubble sort sorts numbers by pairing up numbers starting from the beginning of the list. If one number is smaller than the other, the smaller number gets ordered first. You compare each pair of numbers from start of the list to the end, and keep comparing and swapping numbers until all numbers are in order.
 
 ### Pseudocode
-> Create a loop that runs from 0 until the length of the array
+> Create a loop that runs from 0 until the length of the array.
+
 > Compare a number in the array to the number next to it in the array
+
 > If the first number is larger, then swap the position of the 2 numbers
+
 > Continue to run this loop until the entire array is sorted
 
 ### Performance
