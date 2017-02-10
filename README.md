@@ -37,6 +37,7 @@ Insertion sort starts by taking the second number in the array, then compares it
 ### Pseudocode
 
 ```
+/* look through the array from start to finish - use a loop */
 for i ← 1 to length(A)
     j ← i
     while j > 0 and A[j-1] > A[j]
@@ -125,4 +126,39 @@ functionB (a, b)
   return result.concat (a, b)
 end FunctionB
 ```
+### Performance
+*Best and Worst Case Scenario:*
+- There is no real best or worse case, because even if the array is already sorted, the numbers will still all get split up, then put back together. The more in-order the numbers are, the less swapping will occur, but performance would still be generally the same.
 
+## Quick Sort
+Quick sort sorts by splitting the array in half, sorting each half separately, then comparing the two sorted halves and sorting the halves.
+By sorting in sections, it can sort more quickly.
+
+### Pseudocode
+```
+functionA (array)
+  pivot = array[0]
+  a = []
+  b = []
+  if array.l < pivot
+    return array
+  end if
+
+  for i <- 0 to array.l
+    if (array[i] < pivot)
+      a.push(array[i])
+    end if
+    else if (array[i] > pivot)
+      b.push(array[i])
+    end if
+  end for
+
+  return functionA(a).concat(pivot, functionA(b))
+end functionA
+```
+
+### Performance
+*Best Case Scenario:*
+
+
+*Worst Case Scenario:*

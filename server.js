@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const handlebars = require('express-handlebars');
+const d3 = require('d3');
 const bubble = require('./routes/bubble');
 const insertion = require('./routes/insertion');
 const selection = require('./routes/selection');
