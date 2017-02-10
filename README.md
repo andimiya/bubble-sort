@@ -14,10 +14,24 @@ Bubble sort sorts numbers by pairing up numbers starting from the beginning of t
 
 ### Pseudocode
 ```
-> Create a loop that runs from 0 until the length of the array.
-> Compare a number in the array to the number next to it in the array.
-> If the first number is larger, then swap the position of the 2 numbers.
-> Continue to run this loop until the entire array is sorted.
+n, x, y
+*/Create a loop that runs from 0 until the length of the array.*/
+while (n < A.l - 1)
+  */Continue to run this loop until the entire array is sorted.*/
+  for i <- 0 to A.l
+    b = A[i]
+    c = A[i + 1]
+    */Compare a number in the array to the number next to it in the array.*/
+    */If the first number is larger, then swap the position of the 2 numbers.*/
+    if (A[i] > A[i + 1])
+      b = A[i]
+      c = A[i + 1]
+      A.splice(i, 2, b, c)
+    end if
+  end for
+  n++
+end while
+
 ```
 
 ### Performance
@@ -159,6 +173,7 @@ end functionA
 
 ### Performance
 *Best Case Scenario:*
-
+Most performant scenario would occur if the pivot number was the middle-most number in the sorted array, and the array was very close to being already sorted.
 
 *Worst Case Scenario:*
+The least performant scenario would occur if the pivot number is either the smallest number or the largest number in the list.
